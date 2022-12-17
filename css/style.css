@@ -1,0 +1,124 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    color: rgb(255, 252, 252);
+    height: 100vh;
+    
+    text-transform: uppercase;
+    text-align: center;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr 2.4fr 0.8fr 1.2fr 0.7fr;
+
+    grid-template-areas: 
+    "hed menu menu menu"
+    "hero hero hero hero"
+    "main main image image"
+    "main main ex ex"
+    "banner banner banner banner"
+    ;
+
+}
+
+header {
+    background-color: rgba(240, 104, 13, 0.897);
+    grid-area: hed;
+
+    align-items: center;
+    display: grid;
+}
+.hero {
+    background-color: rgb(223, 101, 196);
+    grid-area: hero;
+
+    align-items: center;
+    display: grid;
+}
+
+nav {
+    background-color: rgb(63, 168, 81);
+    grid-area: menu;
+    
+    align-items: center;
+    display: grid;
+}
+
+
+
+.image{
+    background-color: rgb(86, 28, 134);
+    grid-area: image; 
+
+    align-items: center;
+    display: grid;
+}
+
+
+main {
+    background-color: rgb(102, 132, 230);
+    grid-area: main; 
+
+    align-items: center;
+    display: grid;
+}
+
+
+
+.extra{
+    background-color: rgb(190, 182, 68);
+    grid-area: ex; 
+
+    align-items: center;
+    display: grid;
+}
+.banner{
+    background-color: rgb(243, 62, 78);
+    grid-area: banner; 
+
+    align-items: center;
+    display: grid;
+}
+
+
+
+
+
+@media (max-width: 1024px ) {
+    .container {
+        grid-template-columns: 1fr 1.6fr 1fr;
+        grid-template-rows: 0.5fr 1.8fr 2.5fr 1fr 0.8fr;
+    
+        grid-template-areas: 
+        "hed hed hed"
+        "hero hero hero"
+        "menu main main"
+        "menu banner banner"
+        "menu ex image"
+        ;
+    
+    }
+}
+
+@media (max-width: 480px ) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.8fr 1.5fr 2.6fr 1.1fr 1.3fr 1.3fr;
+    
+        grid-template-areas: 
+        "hed"
+        "menu"
+        "hero"
+        "main"
+        "banner"
+        "ex"
+        "image"
+        ;
+    
+    }
+}
